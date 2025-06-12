@@ -100,7 +100,7 @@ Use this section to outline areas that you want to continue focusing on in futur
 ### Useful resources
 
 - [How to Load and Use Custom CSS Fonts: A Complete Guide](https://www.digitalocean.com/community/tutorials/how-to-load-and-use-custom-fonts-with-css)
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Reducing hight of superscript in HTML by css](https://stackoverflow.com/questions/67454906/reducing-hight-of-superscript-in-html-by-css)
 
 ## Author
 
