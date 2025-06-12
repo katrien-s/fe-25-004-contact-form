@@ -1,0 +1,410 @@
+/* ----------------  */
+/* Custom Properties */
+/* ----------------  */
+
+@font-face {
+	font-family: 'Karla';
+	src: url('/assets/fonts/Karla-VariableFont_wght.ttf') format('truetype');
+	font-style: normal;
+	font-weight: 400 700;
+}
+
+@font-face {
+	font-family: 'Karla';
+	src: url('/assets/fonts/Karla-Italic-VariableFont_wght.ttf')
+		format('truetype');
+	font-style: italic;
+	font-weight: 400 700;
+}
+
+:root {
+	--clr-neutral-100: 0, 0%, 100%;
+	--clr-neutral-500: 186, 15%, 59%;
+	--clr-neutral-900: 187, 24%, 22%;
+
+	--clr-green-200: 148, 38%, 91%;
+	--clr-green-600: 169, 82%, 27%;
+
+	--clr-red-400: 0, 66%, 54%;
+
+	--fw-400: 400;
+	--fw-700: 700;
+
+	--fs-900: 4rem;
+	--fs-800: 2.5rem;
+	--fs-700: 2rem;
+	--fs-600: 1.5rem;
+	--fs-500: 1.125rem;
+	--fs-400: 1rem;
+
+	--ff-sans-normal: 'Karla', sans-serif;
+
+	--border-radius: 10px;
+	--transition: all 0.5s ease;
+}
+
+/* -----------------  */
+/* Reset              */
+/* -----------------  */
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+/* Reset Margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+	margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-wrap: balance;
+}
+
+body {
+	font-family: var(--ff-sans-normal);
+	line-height: 1.5;
+	font-size: var(--fs-400);
+	text-wrap: pretty;
+	color: hsl(var(--clr-neutral-900));
+	background-color: hsl(var(--clr-neutral-100));
+}
+
+img,
+picture {
+	display: block;
+	max-width: 100%;
+	object-fit: cover;
+}
+
+.img {
+	width: 100%;
+	height: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+a {
+	color: unset;
+	text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+/* -----------------  */
+/* Utility Classes    */
+/* -----------------  */
+
+/* General */
+
+.flow > *:where(:not(:first-child)) {
+	margin-top: var(--flow-space, 1.5rem);
+}
+
+.flow-space-big {
+	--flow-space: 4.5rem;
+}
+
+.flow-space-normal {
+	--flow-space: 1rem;
+}
+
+.flow-space-small {
+	--flow-space: 0.25rem;
+}
+
+.flex {
+	display: flex;
+	gap: var(--gap, 2rem);
+}
+
+.flex-wrap {
+	flex-wrap: wrap;
+}
+
+.flex-column {
+	flex-direction: column;
+}
+
+.flex-row {
+	flex-direction: row;
+}
+
+.align-center {
+	align-items: center;
+}
+
+.justify-between {
+	justify-content: space-between;
+}
+
+.justify-center {
+	justify-content: center;
+}
+
+.grid {
+	display: grid;
+	gap: var(--gap, 1rem);
+}
+
+.d-block {
+	display: block;
+}
+
+.wrapper {
+	margin-inline: auto;
+	width: min(100vw - 3rem, 69rem);
+}
+
+.fb-col-wrapper {
+	display: grid;
+	grid-template-columns:
+		1fr repeat(6, calc((min(100vw - 3rem, 69rem) - 5 * 24px) / 6))
+		1fr;
+	gap: 24px;
+}
+
+@media (min-width: 43.75em) {
+	.wrapper {
+		width: min(100vw - 4.5rem, 69rem);
+	}
+
+	.fb-col-wrapper {
+		grid-template-columns:
+			1fr repeat(12, calc((min(100vw - 4.5rem, 69rem) - 11 * 30px) / 12))
+			1fr;
+		gap: 30px;
+	}
+}
+
+.border-radius {
+	border-radius: var(--border-radius);
+}
+
+.margin-block-72 {
+	margin-block: 4.5rem;
+}
+
+/* Colors */
+
+.bg-neutral-100 {
+	background-color: hsl(var(--clr-neutral-100));
+}
+
+.bg-neutral-500 {
+	background-color: hsl(var(--clr-neutral-500));
+}
+
+.bg-neutral-900 {
+	background-color: hsl(var(--clr-neutral-900));
+}
+
+.bg-green-200 {
+	background-color: hsl(var(--clr-green-200));
+}
+
+.bg-green-600 {
+	background-color: hsl(var(--clr-green-600));
+}
+
+.bg-red-400 {
+	background-color: hsl(var(--clr-red-400));
+}
+
+.text-neutral-100 {
+	color: hsl(var(--clr-neutral-100));
+}
+
+.text-neutral-500 {
+	color: hsl(var(--clr-neutral-500));
+}
+
+.text-neutral-900 {
+	color: hsl(var(--clr-neutral-900));
+}
+
+.text-green-200 {
+	color: hsl(var(--clr-green-200));
+}
+
+.text-green-600 {
+	color: hsl(var(--clr-green-600));
+}
+
+.text-red-400 {
+	color: hsl(var(--clr-red-400));
+}
+
+/* Typography */
+
+.ff-sans-normal {
+	font-family: var(--ff-sans-normal);
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.fs-900 {
+	font-size: var(--fs-900);
+}
+.fs-800 {
+	font-size: var(--fs-800);
+}
+.fs-700 {
+	font-size: var(--fs-700);
+}
+.fs-600 {
+	font-size: var(--fs-600);
+}
+.fs-500 {
+	font-size: var(--fs-500);
+}
+.fs-400 {
+	font-size: var(--fs-400);
+}
+.fs-300 {
+	font-size: var(--fs-300);
+}
+.fs-200 {
+	font-size: var(--fs-200);
+}
+
+.fw-400 {
+	font-weight: var(--fw-400);
+}
+
+.fw-500 {
+	font-weight: var(--fw-500);
+}
+
+.fw-700 {
+	font-weight: var(--fw-700);
+}
+
+.fw-900 {
+	font-weight: var(--fw-900);
+}
+
+.line-height-1 {
+	line-height: 1;
+}
+
+.line-height-2 {
+	line-height: 1.16;
+}
+
+.letter-spacing-1 {
+	letter-spacing: -1px;
+}
+
+/* Components */
+
+hr {
+	border: 1px solid hsla(var(--clr-neutral-900), 0.15);
+	margin-block: 1.5rem;
+}
+
+button,
+.button {
+	cursor: pointer;
+	border: transparent;
+	border-radius: 0.5rem;
+	padding: 0.68rem 0.875rem;
+	text-transform: uppercase;
+	font-weight: var(--fw-700);
+	transition: all 500ms ease-in;
+}
+
+.button-accent {
+	color: hsl(var(--clr-neutral-100));
+	background-color: hsl(var(--clr-accent-900));
+}
+
+.button-neutral {
+	color: hsl(var(--clr-primary-900));
+	background-color: hsl(var(--clr-neutral-400));
+}
+
+.button-accent:hover,
+.button-accent:active,
+.button-accent:focus {
+	color: hsl(var(--clr-neutral-100));
+	background-color: hsl(var(--clr-accent-400));
+}
+
+.button-neutral:hover,
+.button-neutral:active,
+.button-neutral:focus {
+	color: hsl(var(--clr-neutral-100));
+	background-color: hsl(var(--clr-primary-900));
+}
+
+@media (min-width: 43.75em) {
+	button,
+	.button {
+		padding: 1rem 1.5rem;
+	}
+}
+
+.icon {
+	background-color: hsl(var(--clr-accent-900));
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 65px;
+	height: 65px;
+	border-radius: var(--border-radius);
+}
+
+/* ----------------  */
+/* Layout            */
+/* ----------------  */
+
+/* Footer */
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
