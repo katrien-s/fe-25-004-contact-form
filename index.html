@@ -15,7 +15,7 @@
 	<body>
 		<main class="wrapper flow">
 			<h1 class="fs-700 fw-700">Contact Us</h1>
-			<form class="form-control flow">
+			<form class="flow">
 				<div class="flex flex-column-row flow flow-on-mobile">
 					<div class="flex flex-column">
 						<label for="">First Name <sup>*</sup></label
@@ -35,11 +35,11 @@
 				<fieldset>
 					<legend>Query Type <sup>*</sup></legend>
 					<div class="flex flex-column-row flow flow-on-mobile">
-						<div class="radio-border">
+						<div class="flex radio-border">
 							<input type="radio" />
 							<label class="fs-500" for="">General Enquiry</label>
 						</div>
-						<div class="radio-border">
+						<div class="flex radio-border">
 							<input type="radio" />
 							<label class="fs-500" for="">Support Request</label>
 						</div>
@@ -50,11 +50,11 @@
 					<label for="">Message <sup>*</sup></label
 					><textarea></textarea>
 				</div>
-				<div class="flex">
-					<input type="checkbox" />
-					<label for=""
-						>I consent to being contacted by the team <sup>*</sup></label
-					>
+				<div class="flex form-consent">
+					<input type="checkbox" name="checkbox" />
+					<label for="checkbox" class="form-control">
+						I consent to being contacted by the team <sup>*</sup>
+					</label>
 				</div>
 
 				<button class="btn">Submit</button>
