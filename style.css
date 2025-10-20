@@ -133,13 +133,13 @@ select {
 }
 
 textarea {
-	resize: none;
-	height: 100px;
+	resize: block;
+	box-sizing: content-box;
+	height: 3lh;
 }
 
 fieldset {
 	border: 0;
-	margin: 0;
 	padding: 0;
 }
 
@@ -147,7 +147,7 @@ legend {
 	margin-bottom: 1rem;
 }
 
-input[type='radio'] {
+[type='radio'] {
 	appearance: none;
 	width: 20px;
 	height: 20px;
@@ -158,14 +158,13 @@ input[type='radio'] {
 	cursor: pointer;
 }
 
-input[type='radio']:checked {
+[type='radio']:checked {
 	background-color: hsl(var(--clr-green-600));
 	outline: 1px solid hsl(var(--clr-green-600));
 	border-color: hsl(var(--clr-green-200));
 }
 
-input[type='checkbox'] {
-  /* appearance: none; */
+[type='checkbox'] {
 	width: 20px;
 	height: 20px;
 }
@@ -400,12 +399,11 @@ button {
 	display: block;
 	width: 100%;
 	margin-top: 2.5rem;
-}
 
-button:hover,
-button:active,
-button:focus {
-	background-color: hsl(var(--clr-neutral-900));
+	&:hover,
+	&:focus-visible {
+		background-color: hsl(var(--clr-neutral-900));
+	}
 }
 
 /* ----------------  */
@@ -421,30 +419,43 @@ textarea,
 	border-radius: var(--border-radius-small);
 	border: 1px solid hsl(var(--clr-neutral-500));
 	padding: 0.75rem 1rem;
-	transition: var(--transition);
+
+	&:focus-visible {
+		outline-color: hsl(var(--clr-green-600));
+	}
 }
 
-input:hover,
-input:focus,
-textarea:hover,
-textarea:focus,
-.radio-border:hover,
-.radio-border:focus {
-	border-color: hsl(var(--clr-green-600));
+fieldset:has([required]) legend,
+.form-group:has(:not([type='radio'])[required]) label {
+	display: flex;
+	gap: 1ch;
+
+	&::after {
+		content: '*';
+		color: hsl(var(--clr-green-600));
+	}
 }
 
-.radio-border {
-	width: 100%;
+.radio-border:has([type='radio']) {
+	position: relative;
+
+	label::after {
+		content: '';
+		position: absolute;
+		inset: 0;
+	}
 }
 
-.radio-border:has(input[type='radio']:checked) {
+.radio-border:has([type='radio']:checked) {
 	background-color: hsl(var(--clr-green-200));
+	border-color: hsl(var(--clr-green-600));
 }
 
 .form-consent {
 	margin-block: 2.5rem;
-  justify-content: start;
-  align-items: center;
+	justify-content: start;
+	align-items: center;
+	gap: 1ch;
 }
 
 /* Footer */

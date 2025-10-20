@@ -15,45 +15,70 @@
 	<body>
 		<main class="wrapper flow">
 			<h1 class="fs-700 fw-700">Contact Us</h1>
+
 			<form class="flow">
 				<div class="flex flex-column-row flow flow-on-mobile">
-					<div class="flex flex-column">
-						<label for="">First Name <sup>*</sup></label
-						><input type="text" required />
+					<div class="flex flex-column | form-group">
+						<label for="fname">First Name</label>
+						<input type="text" id="fname" name="first_name" required />
 					</div>
-					<div class="flex flex-column">
-						<label for="">Last Name <sup>*</sup></label
-						><input type="text" required />
+					<div class="flex flex-column | form-group">
+						<label for="lname">Last Name</label>
+						<input type="text" id="lname" name="last_name" required />
 					</div>
 				</div>
 
-				<div class="flex flex-column">
-					<label for="">Email Address <sup>*</sup></label
-					><input type="email" required />
+				<div class="flex flex-column | form-group">
+					<label for="email">Email Address</label>
+					<input
+						type="email"
+						id="email"
+						name="email"
+						aria-invalid="true"
+						aria-describedby="email-error"
+						class="error"
+						required
+					/>
+					<span id="email-error" class="error-message" role="alert"
+						>Please enter a valid email adress</span
+					>
 				</div>
 
 				<fieldset>
-					<legend>Query Type <sup>*</sup></legend>
-					<div class="flex flex-column-row flow flow-on-mobile">
+					<legend>Query Type</legend>
+					<div class="flex flex-column-row flow flow-on-mobile | form-group">
 						<div class="flex radio-border">
-							<input type="radio" />
-							<label class="fs-500" for="">General Enquiry</label>
+							<input
+								type="radio"
+								id="general"
+								name="query"
+								value="General Enquiry"
+								required
+							/>
+							<label for="general" class="fs-500" for="">General Enquiry</label>
 						</div>
 						<div class="flex radio-border">
-							<input type="radio" />
-							<label class="fs-500" for="">Support Request</label>
+							<input
+								type="radio"
+								id="support"
+								name="query"
+								value="Support Request"
+								required
+							/>
+							<label for="support" class="fs-500" for="">Support Request</label>
 						</div>
 					</div>
 				</fieldset>
 
-				<div class="flex flex-column">
-					<label for="">Message <sup>*</sup></label
-					><textarea></textarea>
+				<div class="flex flex-column | form-group">
+					<label for="message">Message</label>
+					<textarea id="message" name="message" required></textarea>
 				</div>
-				<div class="flex form-consent">
-					<input type="checkbox" name="checkbox" />
-					<label for="checkbox" class="form-control">
-						I consent to being contacted by the team <sup>*</sup>
+
+				<div class="flex form-consent | form-group">
+					<input type="checkbox" name="consent" id="consent" required />
+					<label for="consent" class="form-control">
+						I consent to being contacted by the team
 					</label>
 				</div>
 

@@ -53,7 +53,6 @@ Users should be able to:
 - [Next.js](https://nextjs.org/) - React framework
 - [Styled Components](https://styled-components.com/) - For styles
 
-
 ### What I learned
 
 Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
@@ -78,7 +77,6 @@ const proudOfThisFunc = () => {
 
 If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
 
-
 ### Continued development
 
 Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
@@ -88,12 +86,10 @@ Use this section to outline areas that you want to continue focusing on in futur
 - [How to Load and Use Custom CSS Fonts: A Complete Guide](https://www.digitalocean.com/community/tutorials/how-to-load-and-use-custom-fonts-with-css)
 - [Reducing hight of superscript in HTML by css](https://stackoverflow.com/questions/67454906/reducing-hight-of-superscript-in-html-by-css)
 - [Learn Forms](https://web.dev/learn/forms). Not new to writing code for forms. But there was room for improvement and a better understanding of implementing accessibility correctly.
+- [Associate form fields with their error messages](https://www.linkedin.com/posts/frontend-mentor_a-common-accessibility-mistake-we-see-in-activity-7372289520312033280-ZqSh/)
+- In fine-tuning the form (adding in all attributes, the required *, CSS nesting, error states,...) I followed along with Kevin Powells' lesson on [YouTube](https://youtu.be/jJgNgNNHqjk?si=6oMBtEeXGWvsvCQt). 
 
 ## Author
 
 - Website - [Katrien S.](https://www.katriens.be)
 - Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
