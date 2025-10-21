@@ -11,20 +11,23 @@
 		/>
 		<title>Frontend Mentor | Contact form</title>
 		<link rel="stylesheet" href="style.css" />
+		<script defer src="app.js"></script>
 	</head>
 	<body>
 		<main class="wrapper flow">
 			<h1 class="fs-700 fw-700">Contact Us</h1>
 
-			<form class="flow">
+			<form class="flow" novalidate>
 				<div class="flex flex-column-row flow flow-on-mobile">
 					<div class="flex flex-column | form-group">
 						<label for="fname">First Name</label>
 						<input type="text" id="fname" name="first_name" required />
+						<span class="error-message" aria-live="polite"></span>
 					</div>
 					<div class="flex flex-column | form-group">
 						<label for="lname">Last Name</label>
 						<input type="text" id="lname" name="last_name" required />
+						<span class="error-message" aria-live="polite"></span>
 					</div>
 				</div>
 
@@ -34,20 +37,24 @@
 						type="email"
 						id="email"
 						name="email"
+						data-error="Please enter a valid email address"
 						aria-invalid="true"
 						aria-describedby="email-error"
 						class="error"
 						required
 					/>
-					<span id="email-error" class="error-message" role="alert"
-						>Please enter a valid email adress</span
-					>
+					<span
+						id="email-error"
+						class="error-message"
+						role="alert"
+						aria-live="polite"
+					></span>
 				</div>
 
 				<fieldset>
 					<legend>Query Type</legend>
-					<div class="flex flex-column-row flow flow-on-mobile | form-group">
-						<div class="flex radio-border">
+					<div class="flex flex-column-row">
+						<div class="flow flow-on-mobile | form-group flex radio-border">
 							<input
 								type="radio"
 								id="general"
@@ -68,18 +75,27 @@
 							<label for="support" class="fs-500" for="">Support Request</label>
 						</div>
 					</div>
+					<span class="error-message" aria-live="polite"></span>
 				</fieldset>
 
 				<div class="flex flex-column | form-group">
 					<label for="message">Message</label>
 					<textarea id="message" name="message" required></textarea>
+					<span class="error-message" aria-live="polite"></span>
 				</div>
 
 				<div class="flex form-consent | form-group">
-					<input type="checkbox" name="consent" id="consent" required />
+					<input
+						type="checkbox"
+						name="consent"
+						id="consent"
+						data-error="You must consent to us contacting you to submit this form"
+						required
+					/>
 					<label for="consent" class="form-control">
 						I consent to being contacted by the team
 					</label>
+					<span class="error-message" aria-live="polite"></span>
 				</div>
 
 				<button class="btn">Submit</button>

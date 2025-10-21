@@ -87,9 +87,9 @@ Use this section to outline areas that you want to continue focusing on in futur
 - [Reducing hight of superscript in HTML by css](https://stackoverflow.com/questions/67454906/reducing-hight-of-superscript-in-html-by-css)
 - [Learn Forms](https://web.dev/learn/forms). Not new to writing code for forms. But there was room for improvement and a better understanding of implementing accessibility correctly.
 - [Associate form fields with their error messages](https://www.linkedin.com/posts/frontend-mentor_a-common-accessibility-mistake-we-see-in-activity-7372289520312033280-ZqSh/)
-- In fine-tuning the form (adding in all attributes, the required *, CSS nesting, error states,...) I followed along with Kevin Powells' lesson on [YouTube](https://youtu.be/jJgNgNNHqjk?si=6oMBtEeXGWvsvCQt). 
+- In fine-tuning the form (adding in all attributes, the required \*, CSS nesting, error states,...) I followed along with Kevin Powells' lessons on the [form](https://youtu.be/jJgNgNNHqjk?si=6oMBtEeXGWvsvCQt) and [form validation](https://youtu.be/h5qqmE83Tes?si=_-K_4a4GuFkaf1XU).
 
 ## Author
 
 - Website - [Katrien S.](https://www.katriens.be)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@katrien-s](https://www.frontendmentor.io/profile/katrien-s)
