@@ -17,7 +17,7 @@
 		<main class="wrapper flow">
 			<h1 class="fs-700 fw-700">Contact Us</h1>
 
-			<form class="flow" novalidate>
+			<form class="flow" id="form" novalidate>
 				<div class="flex flex-column-row flow flow-on-mobile">
 					<div class="flex flex-column | form-group">
 						<label for="fname">First Name</label>
@@ -62,7 +62,9 @@
 								value="General Enquiry"
 								required
 							/>
-							<label for="general" class="fs-500" for="">General Enquiry</label>
+							<label for="general" class="fs-500 no-margin-top" for=""
+								>General Enquiry</label
+							>
 						</div>
 						<div class="flex radio-border">
 							<input
@@ -102,17 +104,15 @@
 			</form>
 		</main>
 
-		<!-- First Name This field is required Last Name This field is required Email
-		Address Please enter a valid email address This field is required Query Type
-		General Enquiry Support Request Please select a query type Message This
-		field is required I consent to being contacted by the team To submit this
-		form, please consent to being contacted Message Sent! Thanks for completing
-		the form. We'll be in touch soon! -->
-
 		<footer class="wrapper attribution">
 			Challenge by
 			<a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
 			Coded by Katrien S.
 		</footer>
+
+		<div id="toast" class="toast" role="status" aria-live="polite">
+			<strong>Message Sent!</strong>
+			<p>Thanks for completing the form. We'll be in touch soon!</p>
+		</div>
 	</body>
 </html>

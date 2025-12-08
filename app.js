@@ -1,5 +1,14 @@
 const form = document.querySelector('form');
 
+function showToast() {
+	const toast = document.getElementById('toast');
+	toast.classList.add('show');
+
+	setTimeout(() => {
+		toast.classList.remove('show');
+	}, 4000); // toast stays visible for 4 seconds
+}
+
 const validateField = (field) => {
 	const errorEl =
 		field.type === 'radio'
@@ -35,6 +44,7 @@ form.addEventListener('submit', (e) => {
 	});
 
 	if (isValid) {
+		showToast();
 		form.reset();
 	} else {
 		form.querySelector(':invalid').focus();

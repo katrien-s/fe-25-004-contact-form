@@ -93,22 +93,18 @@ body {
 	text-wrap: pretty;
 	color: hsl(var(--clr-neutral-900));
 	background-color: hsl(var(--clr-green-200));
-	display: grid;
-	place-content: center;
-	height: 100dvh;
+	padding-block: 1.5rem;
 }
 
 main {
 	background-color: hsl(var(--clr-neutral-100));
 	border-radius: var(--border-radius-small);
 	padding: 1.5rem;
-	max-width: 46rem;
-	margin-bottom: 2rem;
 }
 
 .wrapper {
 	margin-inline: auto;
-	width: min(100vw - 3rem, 69rem);
+	width: min(100vw - 3rem, 46rem);
 }
 
 img,
@@ -148,7 +144,6 @@ legend {
 }
 
 [type='radio'] {
-	appearance: none;
 	width: 20px;
 	height: 20px;
 	border: 3px solid hsl(var(--clr-neutral-100));
@@ -162,6 +157,11 @@ legend {
 	background-color: hsl(var(--clr-green-600));
 	outline: 1px solid hsl(var(--clr-green-600));
 	border-color: hsl(var(--clr-green-200));
+}
+
+[type='radio']:focus-visible {
+	outline: 2px solid hsl(var(--clr-green-600));
+	outline-offset: 3px;
 }
 
 [type='checkbox'] {
@@ -254,6 +254,10 @@ a {
 
 .margin-block-72 {
 	margin-block: 4.5rem;
+}
+
+.no-margin-top {
+	margin-top: 0 !important;
 }
 
 /* Colors */
@@ -406,6 +410,38 @@ button {
 	}
 }
 
+.toast {
+	position: fixed;
+	top: 1rem;
+	left: 1rem;
+	right: 1rem;
+	margin: 0 auto;
+	max-width: 22rem;
+	background-color: hsl(var(--clr-neutral-900));
+	color: hsl(var(--clr-neutral-100));
+	padding: 0.75rem 1rem;
+	border-radius: var(--border-radius-small);
+	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+	opacity: 0;
+	transform: translateY(-20px);
+	pointer-events: none;
+	transition: opacity 0.4s ease, transform 0.4s ease;
+	z-index: 999;
+}
+
+.toast.show {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+@media (min-width: 40em) {
+	.toast {
+		right: 1rem;
+		left: auto;
+		max-width: 20rem;
+	}
+}
+
 /* ----------------  */
 /* Layout            */
 /* ----------------  */
@@ -454,9 +490,8 @@ fieldset:has([required]) legend,
 .form-consent {
 	margin-bottom: 2.5rem;
 	justify-content: start;
-	align-items: center;
+	align-items: start;
 	gap: 1ch;
-	flex-wrap: wrap;
 }
 
 .form-consent .error-message {
@@ -480,6 +515,10 @@ input:user-invalid {
 }
 
 /* Footer */
+
+footer {
+	margin-top: 1rem;
+}
 
 .attribution {
 	font-size: 11px;
