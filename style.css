@@ -488,15 +488,11 @@ fieldset:has([required]) legend,
 }
 
 .form-consent {
-	margin-bottom: 2.5rem;
+	position: relative;
+	margin-bottom: 3rem;
 	justify-content: start;
 	align-items: start;
 	gap: 1ch;
-}
-
-.form-consent .error-message {
-	flex-basis: 100%;
-	margin-top: -0.5rem;
 }
 
 input:user-invalid {
@@ -512,6 +508,12 @@ input:user-invalid {
 
 .error-message:empty {
 	display: none;
+}
+
+.form-consent .error-message {
+	position: absolute;
+	top: 100%;
+	left: 0;
 }
 
 /* Footer */
