@@ -93,7 +93,6 @@ body {
 	text-wrap: pretty;
 	color: hsl(var(--clr-neutral-900));
 	background-color: hsl(var(--clr-green-200));
-	padding-block: 1.5rem;
 }
 
 main {
@@ -103,7 +102,7 @@ main {
 }
 
 .wrapper {
-	margin-inline: auto;
+	margin: 1.5rem auto;
 	width: min(100vw - 3rem, 46rem);
 }
 
@@ -140,12 +139,12 @@ fieldset {
 }
 
 legend {
-	margin-bottom: 1rem;
+	margin-block-end: 1rem;
 }
 
 [type='radio'] {
-	width: 20px;
-	height: 20px;
+	width: 1.25em;
+	height: 1.25em;
 	border: 3px solid hsl(var(--clr-neutral-100));
 	border-radius: 50%;
 	padding: 5px;
@@ -178,10 +177,10 @@ a {
 	*,
 	*::before,
 	*::after {
-		animation-duration: 0.01ms !important;
-		animation-iteration-count: 1 !important;
-		transition-duration: 0.01ms !important;
-		scroll-behavior: auto !important;
+		animation-duration: 0.01ms;
+		animation-iteration-count: 1;
+		transition-duration: 0.01ms;
+		scroll-behavior: auto;
 	}
 }
 
@@ -192,7 +191,7 @@ a {
 /* General */
 
 .flow > *:where(:not(:first-child)) {
-	margin-top: var(--flow-space, 1.5rem);
+	margin-block-start: var(--flow-space, 1.5rem);
 }
 
 .flow-space-big {
@@ -256,8 +255,8 @@ a {
 	margin-block: 4.5rem;
 }
 
-.no-margin-top {
-	margin-top: 0 !important;
+.no-margin-block-start {
+	margin-block-start: 0 !important;
 }
 
 /* Colors */
@@ -402,7 +401,7 @@ button {
 	color: hsl(var(--clr-neutral-100));
 	display: block;
 	width: 100%;
-	margin-top: 2.5rem;
+	margin-block-start: 2.5rem;
 
 	&:hover,
 	&:focus-visible {
@@ -411,7 +410,7 @@ button {
 }
 
 .toast {
-	position: fixed;
+	position: sticky;
 	top: 1rem;
 	left: 1rem;
 	right: 1rem;
@@ -489,7 +488,7 @@ fieldset:has([required]) legend,
 
 .form-consent {
 	position: relative;
-	margin-bottom: 3rem;
+	margin-block-end: 3rem;
 	justify-content: start;
 	align-items: start;
 	gap: 1ch;
@@ -502,7 +501,7 @@ input:user-invalid {
 .error-message {
 	color: hsl(var(--clr-red-400));
 	font-size: 0.875rem;
-	margin-top: 0.25rem;
+	margin-block-start: 0.25rem;
 	min-height: 1.25rem;
 }
 
@@ -519,7 +518,7 @@ input:user-invalid {
 /* Footer */
 
 footer {
-	margin-top: 1rem;
+	margin-block-start: 1rem;
 }
 
 .attribution {
