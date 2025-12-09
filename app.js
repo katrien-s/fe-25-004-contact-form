@@ -49,12 +49,13 @@ form.addEventListener('submit', (e) => {
 		}
 	});
 
-	if (isValid) {
-		const invalidField = form.querySelector(':invalid');
-		if (invalidField) {
-			invalidField.focus();
-		}
+	const invalidField = form.querySelector(':invalid');
 
+	if (invalidField) {
+		// Focus the first invalid field to guide the user
+		invalidField.focus();
+	} else {
+		// No invalid fields, safe to submit
 		showToast();
 		form.reset();
 	}
