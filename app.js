@@ -15,6 +15,12 @@ const validateField = (field) => {
 			? field.closest('fieldset').querySelector('.error-message')
 			: field.parentElement.querySelector('.error-message');
 
+	if (errorEl) {
+		errorEl.textContent = 'Please select an option';
+	} else {
+		console.warn('Error message element not found for field:', field);
+	}
+
 	if (!field.validity.valid) {
 		errorEl.textContent = field.dataset.error || 'This field is required';
 		return false;
@@ -44,9 +50,12 @@ form.addEventListener('submit', (e) => {
 	});
 
 	if (isValid) {
+		const invalidField = form.querySelector(':invalid');
+		if (invalidField) {
+			invalidField.focus();
+		}
+
 		showToast();
 		form.reset();
-	} else {
-		form.querySelector(':invalid').focus();
 	}
 });
